@@ -27,4 +27,14 @@ export class Board {
   drop(block: string): void {
     this.tiles[0][Math.floor(this.width / 2)] = block;
   }
+  tick(): void {
+    let row: number = 0;
+    let col: number = 0;
+    let block:string=""
+    for (let y = 0; y < this.height; y++) {
+      for (let x = 0; x < this.width; x++) {
+        if(this.tiles[y][x] !== ".") {          row = y;          col = x;          block = this.tiles[y][x];          console.log(block);          this.tiles[y][x] = ".";}
+      }
+    }
+    this.tiles[row+1][col] = block;}
 }

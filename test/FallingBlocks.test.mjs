@@ -29,17 +29,17 @@ describe("Falling blocks", () => {
          ...`
       );
     });
-    /*
-        test.skip("it moves down one row per tick", () => {
-          board.tick();
 
-          expect(board.toString()).to.equalShape(
-            `...
+    test("it moves down one row per tick", () => {
+      board.tick();
+
+      expect(board.toString()).to.equalShape(
+        `...
              .X.
              ...`
-          );
-        });
-
+      );
+    });
+    /*
         test.skip("at most one block may be falling at a time", () => {
           const before = board.toString();
           expect(() => board.drop("Y")).to.throw("already falling");
@@ -49,7 +49,7 @@ describe("Falling blocks", () => {
       });
       */
 
-  /*
+    /*
   describe("When a block reaches the bottom", () => {
     beforeEach(() => {
       board.drop("X");
@@ -79,7 +79,7 @@ describe("Falling blocks", () => {
   });
   */
 
-  /*
+    /*
   describe("When a block lands on another block", () => {
     beforeEach(() => {
       board.drop("X");
