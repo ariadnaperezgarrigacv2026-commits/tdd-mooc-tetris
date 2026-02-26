@@ -23,4 +23,8 @@ export class Board {
     }
     return boardString;
   }
+
+  drop(block: string): void {
+    this.tiles[0][Math.floor(this.width / 2)] = block;
+  }
 }
