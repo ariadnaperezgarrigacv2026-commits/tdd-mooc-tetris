@@ -43,13 +43,18 @@ export class Board {
         if (this.tiles[y][x] == this.fallingBlock) {
           row = y;
           col = x;
-          if (row != this.height - 1) {            if (this.tiles[row + 1][col] == ".") this.tiles[y][x] = ".";
-          } else {            this.isFalling = false;            this.fallingBlock = "";
+          if (row != this.height - 1) {
+            if (this.tiles[row + 1][col] == ".") this.tiles[y][x] = ".";
+          } else {
+            this.isFalling = false;
+            this.fallingBlock = "";
           }
         }
       }
     }
-    if (row != this.height - 1) {      if (this.tiles[row + 1][col] == ".") {        this.tiles[row + 1][col] = this.fallingBlock;
+    if (row != this.height - 1) {
+      if (this.tiles[row + 1][col] == ".") {
+        this.tiles[row + 1][col] = this.fallingBlock;
       } else {
         this.isFalling = false;
         this.fallingBlock = "";
