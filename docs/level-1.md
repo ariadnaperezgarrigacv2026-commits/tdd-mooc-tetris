@@ -14,7 +14,7 @@ Open the [test/FallingBlocks.test.mjs](../test/FallingBlocks.test.mjs) file.
 Run this project's tests in a terminal with the `npm run autotest` command. It'll run the tests automatically whenever a
 file is saved, until you stop it with `Ctrl+C`. At first there should be one failing test, "The board starts empty".
 
-Implement enough of [src/Board.ts](../src/Board.mjs) to make the one failing test pass.
+Implement enough of [src/Board.ts](../src/Board.ts) to make the one failing test pass.
 
 Then uncomment the next test: remove the `/*` `*/` comment marks, or enable a disabled tests by changing `test.skip`
 to `test`. Uncomment and make the tests pass, one test at a time, until all the tests are passing.
