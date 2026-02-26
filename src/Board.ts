@@ -30,11 +30,18 @@ export class Board {
   tick(): void {
     let row: number = 0;
     let col: number = 0;
-    let block:string=""
+    let block: string = "";
     for (let y = 0; y < this.height; y++) {
       for (let x = 0; x < this.width; x++) {
-        if(this.tiles[y][x] !== ".") {          row = y;          col = x;          block = this.tiles[y][x];          console.log(block);          this.tiles[y][x] = ".";}
+        if (this.tiles[y][x] !== ".") {
+          row = y;
+          col = x;
+          block = this.tiles[y][x];
+          console.log(block);
+          this.tiles[y][x] = ".";
+        }
       }
     }
-    this.tiles[row+1][col] = block;}
+    this.tiles[row + 1][col] = block;
+  }
 }
