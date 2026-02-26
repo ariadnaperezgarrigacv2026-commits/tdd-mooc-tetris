@@ -3,6 +3,7 @@ export class Board {
   height: number;
   tiles: string[][];
   fallingBlock: string = "";
+  isFalling: boolean = true;
 
   constructor(width: number, height: number) {
     this.width = width;
@@ -41,10 +42,15 @@ export class Board {
         if (this.tiles[y][x] == this.fallingBlock) {
           row = y;
           col = x;
-          this.tiles[y][x] = ".";
+          if (row != this.height - 1) this.tiles[y][x] = ".";
+          else this.isFalling = false;
         }
       }
     }
-    this.tiles[row + 1][col] = this.fallingBlock;
+    if (row != this.height - 1) this.tiles[row + 1][col] = this.fallingBlock;
+  }
+
+  hasFalling(): boolean {
+    return this.isFalling;
   }
 }
