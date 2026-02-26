@@ -1,7 +1,7 @@
 export class Board {
-  width;
-  height;
-  private tiles: string[][];
+  width: number;
+  height: number;
+  tiles: string[][];
 
   constructor(width: number, height: number) {
     this.width = width;
@@ -17,8 +17,8 @@ export class Board {
   }
 
   toString(): string {
-    let boardString:string = "";
-    for (let i:number = 0; i < this.height; i++) {
+    let boardString: string = "";
+    for (let i: number = 0; i < this.height; i++) {
       boardString += this.tiles[i].join("") + "\n";
     }
     return boardString;
